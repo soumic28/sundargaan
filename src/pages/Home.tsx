@@ -4,10 +4,21 @@ import SectionWrapper from '../components/SectionWrapper';
 import ArtistCard from '../components/ArtistCard';
 import Button from '../components/Button';
 import WaveDivider from '../components/WaveDivider';
-import { artists } from '../data/artists';
+import { riceContent } from '../data/rice_content';
+import { Artist } from '../types';
 
 const Home: React.FC = () => {
-  const featuredArtists = artists.slice(0, 3);
+  // Map riceContent people to Artist type
+  const featuredArtists: Artist[] = riceContent.people.slice(0, 3).map((person, index) => ({
+    id: index + 1,
+    name: person.name,
+    instrument: 'Folk Artist', // Default as data doesn't have this field
+    genre: 'Sundarbans Folk',
+    location: 'Sundarbans',
+    image: person.image
+  }));
+
+  const featuredStory = riceContent.stories[0];
 
   return (
     <>
@@ -174,19 +185,19 @@ const Home: React.FC = () => {
         <div className="bg-bg-paper rounded-lg shadow-soft overflow-hidden flex flex-col md:flex-row border border-clay">
           <div className="flex-1 min-h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?auto=format&fit=crop&q=80&w=800"
-              alt="Baul Shah Abdul"
+              src={featuredStory.image}
+              alt={featuredStory.title}
               className="w-full h-full object-cover grayscale-[20%]"
             />
           </div>
           <div className="flex-1 p-16 flex flex-col justify-center">
-            <div className="text-tiger mb-4 uppercase tracking-widest font-semibold">Artist Spotlight</div>
-            <h3 className="text-4xl mb-6 text-mud font-heading font-bold">Baul Shah Abdul</h3>
+            <div className="text-tiger mb-4 uppercase tracking-widest font-semibold">Story Spotlight</div>
+            <h3 className="text-4xl mb-6 text-mud font-heading font-bold">{featuredStory.title}</h3>
             <p className="text-lg leading-relaxed mb-8 text-text-secondary">
-              "I learned the Ektara from my grandfather when I was just five. The river taught me the rhythm, and the wind taught me the pitch. Today, I sing not just to entertain, but to remember who we are."
+              "{featuredStory.description}"
             </p>
-            <Button to="/artists" variant="outline" className="self-start border-mud text-mud hover:bg-mud hover:text-bg-paper">
-              Read His Full Story
+            <Button to="/about" variant="outline" className="self-start border-mud text-mud hover:bg-mud hover:text-bg-paper">
+              Read More Stories
             </Button>
           </div>
         </div>

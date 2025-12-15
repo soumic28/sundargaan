@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Artists from './pages/Artists';
-import { About, DigiMela, Gurukul, Volunteer } from './pages/OtherPages';
+import About from './pages/About';
+import { DigiMela, Gurukul, Volunteer } from './pages/OtherPages';
 
 const App: React.FC = () => {
     return (

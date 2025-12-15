@@ -3,6 +3,7 @@ import { ArrowRight, Music, Heart, Users, BookOpen, ShoppingBag, Wind, Droplets 
 import SectionWrapper from '../components/SectionWrapper';
 import ArtistCard from '../components/ArtistCard';
 import Button from '../components/Button';
+import WaveDivider from '../components/WaveDivider';
 import { artists } from '../data/artists';
 
 const Home: React.FC = () => {
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
           <div className="inline-block mb-4 border-b border-tiger pb-2 text-tiger uppercase tracking-[0.2em] text-sm font-semibold animate-in fade-in duration-1000">
             Est. 2024 • Sundarbans
           </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-none text-mud animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-none text-mud animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards">
             Echoes of the <br />
             <span className="italic font-heading bg-gradient-to-r from-tiger via-yellow-600 to-tiger bg-clip-text text-transparent inline-block animate-pulse pb-2">
               Mangroves
@@ -61,7 +62,7 @@ const Home: React.FC = () => {
       {/* The Land of Tides (New Ecology Section) */}
       <SectionWrapper className="pb-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl mb-4 text-mud font-heading font-bold">The Land of Tides</h2>
+          <h2 className="text-3xl md:text-5xl mb-4 text-mud font-heading font-bold">The Land of Tides</h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto font-heading">
             Where the river meets the sea, and the tiger rules the jungle. Our music is born from the rhythm of these tides.
           </p>
@@ -113,7 +114,7 @@ const Home: React.FC = () => {
       <SectionWrapper className="bg-bg-sand">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-5xl mb-6 text-mud font-heading font-bold">The Dying Art</h2>
+            <h2 className="text-3xl md:text-5xl mb-6 text-mud font-heading font-bold">The Dying Art</h2>
             <p className="text-xl text-text-secondary mb-6 font-heading leading-relaxed">
               The Bhatiali melodies that once echoed across the rivers are fading. The rhythmic beats of the Khamak are being drowned out by modern noise.
             </p>
@@ -166,7 +167,7 @@ const Home: React.FC = () => {
       {/* Stories from the Delta (New Artist Spotlight) */}
       <SectionWrapper>
         <div className="text-center mb-16">
-          <h2 className="text-5xl mb-4 text-mud font-heading font-bold">Stories from the Delta</h2>
+          <h2 className="text-3xl md:text-5xl mb-4 text-mud font-heading font-bold">Stories from the Delta</h2>
           <p className="text-xl text-text-secondary">Every artist has a journey. Every song has a history.</p>
         </div>
 
@@ -194,15 +195,11 @@ const Home: React.FC = () => {
       {/* Featured Artists */}
       <SectionWrapper className="bg-bg-sand relative">
         {/* Top Organic Divider */}
-        <div className="absolute -top-[1px] left-0 w-full leading-[0] rotate-180">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[60px] fill-bg-paper">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-          </svg>
-        </div>
+        <WaveDivider />
 
-        <div className="flex justify-between items-end mb-16 pt-16">
+        <div className="flex justify-between items-end mb-16 pt-20 md:pt-44">
           <div>
-            <h2 className="text-5xl mb-2 text-mud font-heading font-bold">Voices of the Soil</h2>
+            <h2 className="text-3xl md:text-5xl mb-2 text-mud font-heading font-bold">Voices of the Soil</h2>
             <p className="text-mangrove font-heading text-xl">Listen to the authentic melodies of the delta.</p>
           </div>
           <Button to="/artists" variant="ghost" className="text-mud border-b border-mud rounded-none px-0 py-2 hover:bg-transparent hover:opacity-70">
@@ -224,7 +221,7 @@ const Home: React.FC = () => {
           <div className="bg-mangrove text-bg-paper p-12 rounded-lg relative overflow-hidden">
             <div className="relative z-10">
               <div className="mb-4 text-tiger"><BookOpen size={40} /></div>
-              <h3 className="text-4xl mb-4 text-bg-paper font-heading font-bold">Gurukul</h3>
+              <h3 className="text-2xl md:text-4xl mb-4 text-bg-paper font-heading font-bold">Gurukul</h3>
               <p className="mb-8 opacity-90 text-lg">
                 Learn the ancient arts directly from the masters. Online and offline sessions available for Ektara, Dotara, and Folk singing.
               </p>
@@ -240,7 +237,7 @@ const Home: React.FC = () => {
           <div className="bg-mud text-bg-paper p-12 rounded-lg relative overflow-hidden">
             <div className="relative z-10">
               <div className="mb-4 text-tiger"><ShoppingBag size={40} /></div>
-              <h3 className="text-4xl mb-4 text-bg-paper font-heading font-bold">DigiMela</h3>
+              <h3 className="text-2xl md:text-4xl mb-4 text-bg-paper font-heading font-bold">DigiMela</h3>
               <p className="mb-8 opacity-90 text-lg">
                 Support the artisans. Buy authentic handcrafted instruments and local crafts directly from the Sundarbans.
               </p>
@@ -257,7 +254,7 @@ const Home: React.FC = () => {
       {/* Impact / Stats Section (Refined) */}
       <SectionWrapper className="bg-bg-sand pb-24">
         <div className="text-center mb-16">
-          <h2 className="text-4xl mb-4 text-mud font-heading font-bold">Our Impact</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 text-mud font-heading font-bold">Our Impact</h2>
           <p className="text-text-secondary">Bridging the gap between talent and opportunity.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
@@ -280,7 +277,7 @@ const Home: React.FC = () => {
       {/* Call to Action / Newsletter */}
       <SectionWrapper className="bg-mud text-bg-paper text-center py-24">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-5xl mb-6 text-tiger font-heading font-bold">Join the Movement</h2>
+          <h2 className="text-3xl md:text-5xl mb-6 text-tiger font-heading font-bold">Join the Movement</h2>
           <p className="text-xl mb-10 opacity-90 font-heading">
             Be part of the revival. Subscribe to our newsletter for updates on new artists, upcoming events, and stories from the Sundarbans.
           </p>

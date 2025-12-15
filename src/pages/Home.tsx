@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-none text-mud animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards">
             Echoes of the <br />
-            <span className="italic font-heading bg-gradient-to-r from-tiger via-yellow-600 to-tiger bg-clip-text text-transparent inline-block animate-pulse">
+            <span className="italic font-heading bg-gradient-to-r from-tiger via-yellow-600 to-tiger bg-clip-text text-transparent inline-block animate-pulse pb-2">
               Mangroves
             </span>
           </h1>
@@ -51,11 +51,11 @@ const Home: React.FC = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-[100px] left-1/2 -translate-x-1/2 opacity-60 z-20 animate-bounce duration-2000">
+        {/* <div className="absolute bottom-[100px] left-1/2 -translate-x-1/2 opacity-60 z-20 animate-bounce duration-2000">
           <div className="w-[30px] h-[50px] border-2 border-mud rounded-2xl flex justify-center pt-2">
             <div className="w-1 h-2 bg-mud rounded-full animate-ping" />
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* The Land of Tides (New Ecology Section) */}

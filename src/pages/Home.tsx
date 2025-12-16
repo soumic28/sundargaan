@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import WaveDivider from '../components/WaveDivider';
 import { riceContent } from '../data/rice_content';
 import { Artist } from '../types';
+import AnimatedTitle from '../components/AnimatedTitle';
 
 // Import generated images
 import heroBg from '../assets/generated/hero_bg.png';
@@ -36,7 +37,7 @@ const Home: React.FC = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden text-mud text-center bg-bg-paper">
         {/* Background Image with Light Filter */}
         <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-15 z-0 sepia-[0.2] brightness-110 contrast-90"
+          className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-30 z-0 sepia-[0.2] brightness-110 contrast-90"
           style={{ backgroundImage: `url("${heroBg}")` }}
         />
 
@@ -53,11 +54,10 @@ const Home: React.FC = () => {
           <div className="inline-block mb-4 border-b border-tiger pb-2 text-tiger uppercase tracking-[0.2em] text-sm font-semibold animate-in fade-in duration-1000">
             Est. 2024 • Sundarbans
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-none text-mud animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards">
+
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-none text-mud animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards flex flex-col items-center">
             Echoes of the <br />
-            <span className="italic font-heading bg-gradient-to-r from-tiger via-yellow-600 to-tiger bg-clip-text text-transparent inline-block animate-pulse pb-2">
-              Mangroves
-            </span>
+            <AnimatedTitle text="Mangroves" className="w-[300px] md:w-[500px] h-[80px] md:h-[120px] -mt-2 " />
           </h1>
           <p className="text-2xl max-w-2xl mx-auto mb-10 opacity-90 font-heading leading-relaxed text-text-secondary animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500 fill-mode-backwards">
             Reviving the lost folk arts of Bengal. A journey through the rivers, rhythm, and soul of the Sundarbans.

@@ -7,6 +7,16 @@ import WaveDivider from '../components/WaveDivider';
 import { riceContent } from '../data/rice_content';
 import { Artist } from '../types';
 
+// Import generated images
+import heroBg from '../assets/generated/hero_bg.png';
+import agedPaper from '../assets/generated/aged_paper.png';
+import mangroveImg from '../assets/generated/mangrove.png';
+import tigerImg from '../assets/generated/tiger.png';
+import riverImg from '../assets/generated/river.png';
+import ektaraImg from '../assets/generated/ektara.png';
+import dotaraImg from '../assets/generated/dotara.png';
+import musicianImg from '../assets/generated/musician.png';
+
 const Home: React.FC = () => {
   // Map riceContent people to Artist type
   const featuredArtists: Artist[] = riceContent.people.slice(0, 3).map((person, index) => ({
@@ -27,7 +37,7 @@ const Home: React.FC = () => {
         {/* Background Image with Light Filter */}
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-15 z-0 sepia-[0.2] brightness-110 contrast-90"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1598335624167-436f971e21f8?auto=format&fit=crop&q=80&w=1920")' }}
+          style={{ backgroundImage: `url("${heroBg}")` }}
         />
 
         {/* Gradient Overlay for Blending (Light) */}
@@ -36,7 +46,7 @@ const Home: React.FC = () => {
         {/* Texture Overlay */}
         <div
           className="absolute top-0 left-0 w-full h-full opacity-60 z-10 mix-blend-multiply"
-          style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/aged-paper.png")' }}
+          style={{ backgroundImage: `url("${agedPaper}")` }}
         />
 
         <div className="container mx-auto relative z-20 pt-0">
@@ -83,7 +93,7 @@ const Home: React.FC = () => {
           {/* Card 1: Mangroves */}
           <div className="relative h-[300px] rounded-lg overflow-hidden group">
             <img
-              src="https://images.unsplash.com/photo-1544979590-2c48273b3409?auto=format&fit=crop&q=80&w=800"
+              src={mangroveImg}
               alt="Mangrove Roots"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -96,7 +106,7 @@ const Home: React.FC = () => {
           {/* Card 2: Royal Bengal Tiger */}
           <div className="relative h-[300px] rounded-lg overflow-hidden group">
             <img
-              src="https://images.unsplash.com/photo-1505553875456-0c9f7e16acdd?auto=format&fit=crop&q=80&w=800"
+              src={tigerImg}
               alt="Royal Bengal Tiger"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -109,7 +119,7 @@ const Home: React.FC = () => {
           {/* Card 3: River Life */}
           <div className="relative h-[300px] rounded-lg overflow-hidden group">
             <img
-              src="https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&q=80&w=800"
+              src={riverImg}
               alt="River Boat"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -133,7 +143,7 @@ const Home: React.FC = () => {
             <div className="mt-8 flex flex-col gap-6">
               <div className="flex gap-4 items-center">
                 <div className="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-tiger shrink-0">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ektara.jpg/220px-Ektara.jpg" alt="Ektara" className="w-full h-full object-cover" />
+                  <img src={ektaraImg} alt="Ektara" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h4 className="text-xl text-mud font-bold">Ektara</h4>
@@ -142,7 +152,7 @@ const Home: React.FC = () => {
               </div>
               <div className="flex gap-4 items-center">
                 <div className="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-tiger shrink-0">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Dotara.jpg/220px-Dotara.jpg" alt="Dotara" className="w-full h-full object-cover" />
+                  <img src={dotaraImg} alt="Dotara" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h4 className="text-xl text-mud font-bold">Dotara</h4>
@@ -164,7 +174,7 @@ const Home: React.FC = () => {
           </div>
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1535581652167-3d6b98c36cd0?auto=format&fit=crop&q=80&w=800"
+              src={musicianImg}
               alt="Musician playing instrument"
               className="w-full rounded-organic shadow-deep sepia-[0.2]"
             />

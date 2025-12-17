@@ -19,7 +19,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ text, className = '' }) =
     return (
         <div className={`relative inline-block ${className}`}>
             <svg
-                viewBox="0 0 400 80"
+                viewBox="0 0 600 100"
                 className="w-full h-full overflow-visible"
                 style={{ maxWidth: '100%', height: 'auto' }}
             >
@@ -37,7 +37,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ text, className = '' }) =
                     y="50%"
                     dominantBaseline="middle"
                     textAnchor="middle"
-                    className="font-heading italic font-bold text-6xl md:text-8xl"
+                    className="font-heading italic font-bold text-5xl md:text-8xl"
                     style={{
                         fill: 'none',
                         stroke: 'url(#textGradient)',
@@ -56,7 +56,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ text, className = '' }) =
                     y="50%"
                     dominantBaseline="middle"
                     textAnchor="middle"
-                    className="font-heading italic font-bold text-6xl md:text-8xl"
+                    className="font-heading italic font-bold text-5xl md:text-8xl"
                     style={{
                         fill: 'url(#textGradient)',
                         stroke: 'none',

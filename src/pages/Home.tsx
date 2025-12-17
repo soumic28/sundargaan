@@ -57,7 +57,7 @@ const Home: React.FC = () => {
 
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-none text-mud animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards flex flex-col items-center">
             Echoes of the <br />
-            <AnimatedTitle text="Mangroves" className="w-[300px] md:w-[500px] h-[80px] md:h-[120px] -mt-2 " />
+            <AnimatedTitle text="Mangroves" className="w-full max-w-[300px] md:max-w-[500px] h-[60px] md:h-[120px] -mt-2 " />
           </h1>
           <p className="text-2xl max-w-2xl mx-auto mb-10 opacity-90 font-heading leading-relaxed text-text-secondary animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500 fill-mode-backwards">
             Reviving the lost folk arts of Bengal. A journey through the rivers, rhythm, and soul of the Sundarbans.

@@ -6,9 +6,12 @@ import Artists from './pages/Artists';
 import About from './pages/About';
 import { DigiMela, Gurukul, Volunteer } from './pages/OtherPages';
 
+import TigerCursor from './components/TigerCursor';
+
 const App: React.FC = () => {
     return (
         <Router>
+            <TigerCursor />
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />

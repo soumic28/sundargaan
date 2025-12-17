@@ -30,6 +30,7 @@ const About: React.FC = () => {
                                 <img
                                     src={img}
                                     alt={`About Rice ${index + 1}`}
+                                    loading="lazy"
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                 />
                             </div>

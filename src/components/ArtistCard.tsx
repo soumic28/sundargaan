@@ -19,6 +19,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist }) => {
         <img
           src={artist.image || 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?auto=format&fit=crop&q=80&w=800'}
           alt={artist.name}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute bottom-4 left-4 bg-mangrove px-3 py-1 text-xs font-semibold text-tiger tracking-wider uppercase">

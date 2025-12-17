@@ -95,6 +95,7 @@ const Home: React.FC = () => {
             <img
               src={mangroveImg}
               alt="Mangrove Roots"
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-mangrove/90 to-transparent">
@@ -108,6 +109,7 @@ const Home: React.FC = () => {
             <img
               src={tigerImg}
               alt="Royal Bengal Tiger"
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-mud/90 to-transparent">
@@ -121,6 +123,7 @@ const Home: React.FC = () => {
             <img
               src={riverImg}
               alt="River Boat"
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-river/90 to-transparent">
@@ -143,7 +146,7 @@ const Home: React.FC = () => {
             <div className="mt-8 flex flex-col gap-6">
               <div className="flex gap-4 items-center">
                 <div className="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-tiger shrink-0">
-                  <img src={ektaraImg} alt="Ektara" className="w-full h-full object-cover" />
+                  <img src={ektaraImg} alt="Ektara" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h4 className="text-xl text-mud font-bold">Ektara</h4>
@@ -152,7 +155,7 @@ const Home: React.FC = () => {
               </div>
               <div className="flex gap-4 items-center">
                 <div className="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-tiger shrink-0">
-                  <img src={dotaraImg} alt="Dotara" className="w-full h-full object-cover" />
+                  <img src={dotaraImg} alt="Dotara" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h4 className="text-xl text-mud font-bold">Dotara</h4>
@@ -176,6 +179,7 @@ const Home: React.FC = () => {
             <img
               src={musicianImg}
               alt="Musician playing instrument"
+              loading="lazy"
               className="w-full rounded-organic shadow-deep sepia-[0.2]"
             />
             {/* Decorative Elements */}
@@ -197,6 +201,7 @@ const Home: React.FC = () => {
             <img
               src={featuredStory.image}
               alt={featuredStory.title}
+              loading="lazy"
               className="w-full h-full object-cover grayscale-[20%]"
             />
           </div>
